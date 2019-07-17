@@ -2041,6 +2041,23 @@ export interface SecurityPutUser<T = any> extends Generic {
   body: T;
 }
 
+export interface SlmDeleteLifecycle extends Generic {
+  policy?: string;
+}
+
+export interface SlmExecuteLifecycle extends Generic {
+  policy_id?: string;
+}
+
+export interface SlmGetLifecycle extends Generic {
+  policy_id?: string;
+}
+
+export interface SlmPutLifecycle<T = any> extends Generic {
+  policy_id?: string;
+  body?: T;
+}
+
 export interface SqlClearCursor<T = any> extends Generic {
   body: T;
 }

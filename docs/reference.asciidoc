@@ -1976,7 +1976,7 @@ _Default:_ `open`
 ----
 client.indices.flushSynced([params] [, options] [, callback])
 ----
-link:{ref}/indices-synced-flush.html[Reference]
+link:{ref}/indices-flush.html#indices-synced-flush[Reference]
 [cols=2*]
 |===
 |`index`
@@ -6307,6 +6307,61 @@ link:{ref}/security-api-put-user.html[Reference]
 
 |`body`
 |`object` - The user to add
+
+|===
+
+=== slm.deleteLifecycle
+[source,js]
+----
+client.slm.deleteLifecycle([params] [, options] [, callback])
+----
+link:{ref}/slm-api.html[Reference]
+[cols=2*]
+|===
+|`policy`
+|`string` - The id of the snapshot lifecycle policy to remove
+
+|===
+
+=== slm.executeLifecycle
+[source,js]
+----
+client.slm.executeLifecycle([params] [, options] [, callback])
+----
+link:{ref}/slm-api.html[Reference]
+[cols=2*]
+|===
+|`policy_id` or `policyId`
+|`string` - The id of the snapshot lifecycle policy to be executed
+
+|===
+
+=== slm.getLifecycle
+[source,js]
+----
+client.slm.getLifecycle([params] [, options] [, callback])
+----
+link:{ref}/slm-api.html[Reference]
+[cols=2*]
+|===
+|`policy_id` or `policyId`
+|`string` - Comma-separated list of snapshot lifecycle policies to retrieve
+
+|===
+
+=== slm.putLifecycle
+[source,js]
+----
+client.slm.putLifecycle([params] [, options] [, callback])
+----
+link:{ref}/slm-api.html[Reference]
+[cols=2*]
+|===
+|`policy_id` or `policyId`
+|`string` - The id of the snapshot lifecycle policy
+
+|`body`
+|`object` - The snapshot lifecycle policy definition to register
 
 |===
 
